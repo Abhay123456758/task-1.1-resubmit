@@ -1,0 +1,102 @@
+/* General Link Styles */
+a {
+    padding: 10px 18px; 
+    margin-right: 8px; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+.navigation {
+    padding: 4px;
+    border: 2px solid black;
+}
+
+/* Image Section */
+.Image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    bottom: 10px; 
+    width: 97.7%; 
+    background-color: rgba(0, 0, 0, 0.9); 
+    text-align: center; 
+    padding: 10px; 
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.Image:hover .content {
+    opacity: 1; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Profile Section */
+.Profile {
+    text-align: center;
+    color: lightgreen;
+}
+
+/* Projects Section */
+.Project {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+
+.Project1, .Project2 {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%; 
+}
+
+.Project1 img, .Project2 img {
+    margin-right: 20px; 
+}
+
+.description {
+    max-width: 600px; 
+}
+
+/* Gallery Section */
+.Gallery, h3 {
+    text-align: center;
+    margin-left: 25px;
+    color: lightgreen;
+}
+
+/* Photo Grid Section */
+.My_Photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    gap: 20px; /* Adds spacing between images */
+}
+
+.My_Photos img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) and (min-width: 801px) {
+    .My_Photos {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    }
+}
+
+@media (max-width: 800px) and (min-width: 601px) {
+    .My_Photos {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .My_Photos {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
